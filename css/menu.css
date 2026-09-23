@@ -1,0 +1,250 @@
+/* ========================================
+   DONDE GUICHO
+   ESTILOS DE LA PÁGINA MENÚ
+   (se carga después de style.css)
+======================================== */
+
+.menu-header,
+.menu-categorias,
+.menu-contenido {
+    font-family: inherit;
+}
+
+/* Enlace activo del navbar */
+.navbar-links a.activo:not(.btn-pedir) {
+    color: var(--naranja-oscuro);
+}
+
+.navbar-links a.activo:not(.btn-pedir)::after {
+    width: 100%;
+}
+
+
+/* =========================
+   ENCABEZADO DEL MENÚ
+========================= */
+
+.menu-header {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.88) 0%,
+            rgba(0,0,0,0.65) 50%,
+            rgba(0,0,0,0.35) 100%
+        ),
+        url("../images/carne-asada.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--blanco);
+}
+
+.menu-header .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.menu-header h1 {
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.menu-header p:not(.hero-subtitle) {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eeeeee;
+}
+
+
+/* =========================
+   BARRA DE CATEGORÍAS
+========================= */
+
+.menu-categorias {
+    position: sticky;
+    top: 82px;
+    z-index: 900;
+    background-color: var(--blanco);
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+}
+
+.menu-categorias .container {
+    display: flex;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.menu-categorias .container::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-categorias a {
+    flex: 0 0 auto;
+    padding: 9px 20px;
+    border-radius: 50px;
+    background-color: var(--crema);
+    border: 2px solid #eeeeee;
+    color: var(--negro);
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.menu-categorias a:hover {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+}
+
+
+/* =========================
+   SECCIONES DE CATEGORÍA
+========================= */
+
+.menu-contenido {
+    background-color: var(--crema);
+    padding: 30px 0 40px;
+}
+
+.menu-seccion {
+    padding: 50px 0 20px;
+    scroll-margin-top: 160px;
+}
+
+.menu-seccion-titulo {
+    margin-bottom: 30px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--naranja);
+}
+
+.menu-seccion-titulo .section-label {
+    margin-bottom: 8px;
+}
+
+.menu-seccion-titulo h2 {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+
+/* =========================
+   TARJETA DE PRODUCTO
+========================= */
+
+.menu-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+}
+
+.menu-item-img {
+    height: 230px;
+    background-color: #dddddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-item-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.menu-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.menu-item-top h3 {
+    font-size: 23px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.menu-precio {
+    flex: 0 0 auto;
+    color: var(--rojo);
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.btn-item {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 10px 24px;
+    border-radius: 50px;
+    background-color: var(--naranja);
+    color: var(--negro);
+    font-size: 14px;
+    font-weight: 800;
+    transition: all 0.25s ease;
+}
+
+.btn-item:hover {
+    background-color: var(--naranja-oscuro);
+    color: var(--blanco);
+}
+
+
+/* =========================
+   CATEGORÍA SIN PRODUCTOS
+========================= */
+
+.menu-vacio {
+    padding: 28px;
+    border: 2px dashed #dddddd;
+    border-radius: 16px;
+    color: var(--gris);
+    font-size: 17px;
+    text-align: center;
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 991px) {
+
+    .menu-categorias {
+        top: 79px;
+    }
+
+    .menu-header {
+        min-height: 300px;
+    }
+
+    .menu-header h1 {
+        font-size: 50px;
+        letter-spacing: -2px;
+    }
+
+    .menu-seccion-titulo h2 {
+        font-size: 34px;
+    }
+}
