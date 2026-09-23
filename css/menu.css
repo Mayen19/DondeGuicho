@@ -29,12 +29,10 @@
     display: flex;
     align-items: center;
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.88) 0%,
-            rgba(0,0,0,0.65) 50%,
-            rgba(0,0,0,0.35) 100%
-        ),
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.65) 50%,
+            rgba(0, 0, 0, 0.35) 100%),
         url("../images/carne-asada.jpg");
     background-size: cover;
     background-position: center;
@@ -72,7 +70,7 @@
     z-index: 900;
     background-color: var(--blanco);
     border-bottom: 1px solid #eeeeee;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
 }
 
 .menu-categorias .container {
@@ -149,13 +147,13 @@
     background-color: var(--blanco);
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item-img {
@@ -222,13 +220,13 @@
     background-color: var(--blanco);
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .menu-producto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -275,7 +273,7 @@
 
     transform: rotate(35deg);
 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -388,4 +386,26 @@
         padding: 7px 48px;
         font-size: 10px;
     }
+}
+
+/* =========================
+   PLACEHOLDER DE PRODUCTOS
+========================= */
+
+.menu-producto-imagen {
+    background:
+        linear-gradient(135deg,
+            rgba(245, 166, 35, 0.12),
+            rgba(32, 179, 166, 0.08)),
+        #f1f1f1;
+}
+
+.menu-producto-imagen span:first-child {
+    padding: 9px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #888888;
+    font-size: 13px;
+    font-weight: 700;
 }
