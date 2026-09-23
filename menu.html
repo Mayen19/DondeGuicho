@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Menú | Donde Guicho</title>
-    <meta name="description" content="Menú de Donde Guicho: carne asada, pollo asado, costillas, hamburguesas, burritos, panes con carne y crepas.">
+    <meta name="description"
+        content="Menú de Donde Guicho: carne asada, pollo asado, costillas, hamburguesas, burritos, panes con carne y crepas.">
     <meta name="theme-color" content="#F5A623">
 
     <!-- ÍCONO DE LA PESTAÑA -->
@@ -35,14 +37,8 @@
                 <img src="images/logo.png" alt="Donde Guicho">
             </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menú">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -88,14 +84,15 @@
     <!-- BARRA DE CATEGORÍAS -->
     <nav class="menu-categorias" aria-label="Categorías del menú">
         <div class="container">
-            <a href="#asados">Carne asada</a>
+            <a href="#carne">Carne asada</a>
             <a href="#pollo">Pollo asado</a>
-            <a href="#costillas">Costillas</a>
             <a href="#hamburguesas">Hamburguesas</a>
             <a href="#burritos">Burritos</a>
             <a href="#panes">Panes con carne</a>
             <a href="#crepas">Crepas</a>
-            <a href="#otros">Otros</a>
+            <a href="#bebidas-especiales">Bebidas especiales</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#acompanamientos">Acompañamientos y Extras</a>
         </div>
     </nav>
 
@@ -128,15 +125,91 @@
 
 
             <!-- CARNE ASADA -->
-            <section id="asados" class="menu-seccion">
+            <section id="carne" class="menu-seccion">
                 <div class="menu-seccion-titulo">
                     <p class="section-label">ASADOS</p>
                     <h2>Carne asada</h2>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Carne Nacional -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Carne Nacional</h3>
+                                <p>Carne de Res</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q40.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Carne Angus -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Carne Angus</h3>
+                                <p>Carne de Res Corte especial</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q45.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Costilla BBQ -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                                <span class="producto-badge">MÁS VENDIDA</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Costilla BBQ</h3>
+                                <p>Costilla de Cerdo (Elige Papas Fritas o Ensalada)</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q45.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combo Para 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Combo Para 2</h3>
+                                <p>Carne de Res, Costillas BBQ y 2 Bebidas</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q95.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -147,38 +220,119 @@
                     <p class="section-label">ASADOS</p>
                     <h2>Pollo asado</h2>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Pollo Asado -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Pollo Asado</h3>
+                                <p>Pierna y cuadril asado con BBQ o Chimichurri</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q35.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Filete de Pollo -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Filete de Pollo</h3>
+                                <p>Filete de pechuga</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q40.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ensalada Donde Guicho -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Ensalada Donde Guicho</h3>
+                                <p>Ensalada con filete de pechuga asada</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q40.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
 
-            <!-- COSTILLAS -->
-            <section id="costillas" class="menu-seccion">
-                <div class="menu-seccion-titulo">
-                    <p class="section-label">ASADOS</p>
-                    <h2>Costillas</h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
-                    </div>
-                </div>
-            </section>
 
 
             <!-- HAMBURGUESAS -->
             <section id="hamburguesas" class="menu-seccion">
                 <div class="menu-seccion-titulo">
-                    <p class="section-label">A LA PARRILLA</p>
+                    <p class="section-label">COMBOS</p>
                     <h2>Hamburguesas</h2>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Quesoburgesa con Papas Asadas -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Quesoburgesa Papas Asadas</h3>
+                                <p>¼ de Libra con papas asadas y Bebida</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q42.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Quesoburgesa con Papas Fritas -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Quesoburgesa Papas Fritas</h3>
+                                <p>¼ de Libra con papas fritas y Bebida</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q47.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -186,13 +340,50 @@
             <!-- BURRITOS -->
             <section id="burritos" class="menu-seccion">
                 <div class="menu-seccion-titulo">
-                    <p class="section-label">PARA LLEVAR</p>
+                    <p class="section-label">COMBOS</p>
                     <h2>Burritos</h2>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Burrito de Res -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Burrito de Res</h3>
+                                <p>Acompañado de Papas Fritas y Bebida</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q45.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Burrito de Pollo -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Burrito de Pollo</h3>
+                                <p>Acompañado de Papas Fritas y Bebida</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q45.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -200,13 +391,50 @@
             <!-- PANES CON CARNE -->
             <section id="panes" class="menu-seccion">
                 <div class="menu-seccion-titulo">
-                    <p class="section-label">ANTOJITOS</p>
+                    <p class="section-label">COMBOS</p>
                     <h2>Panes con carne</h2>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Pan con Carne -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Pan con Carne</h3>
+                                <p>Acompañado de Papas Fritas y Bebida</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q40.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Pan con Costilla -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Pan con Costilla</h3>
+                                <p>Acompañado de Papas Fritas y Bebida</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q45.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -214,27 +442,579 @@
             <!-- CREPAS -->
             <section id="crepas" class="menu-seccion">
                 <div class="menu-seccion-titulo">
-                    <p class="section-label">DULCES Y SALADAS</p>
+                    <p class="section-label">POSTRES</p>
                     <h2>Crepas</h2>
                 </div>
+
+                <p class="menu-nota">Disponibles a partir de las 4:00 PM</p>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Nutella -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Crepa de Nutella</h3>
+                                <p>Clásica Q13.00 · Premium Q18.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q13.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Banano -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Crepa de Banano</h3>
+                                <p>Clásica Q16.00 · Premium Q21.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q16.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Angelitos -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Crepa de Angelitos</h3>
+                                <p>Clásica Q16.00 · Premium Q21.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q16.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botonetas -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Crepa de Botonetas</h3>
+                                <p>Clásica Q16.00 · Premium Q21.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q16.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fresa -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Crepa de Fresa</h3>
+                                <p>Clásica Q17.00 · Premium Q22.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q17.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fresa y Banano -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Fresa y Banano</h3>
+                                <p>Clásica Q17.00 · Premium Q22.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q17.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fresa y Botonetas -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Fresa y Botonetas</h3>
+                                <p>Clásica Q19.00 · Premium Q24.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q19.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Melocotón -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Crepa de Melocotón</h3>
+                                <p>Clásica Q20.00 · Premium Q25.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q20.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oreo y Fresa -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Oreo y Fresa</h3>
+                                <p>Clásica Q23.00 · Premium Q28.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q23.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dulce de Leche -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Dulce de Leche</h3>
+                                <p>Con queso crema · Clásica Q20.00 · Premium Q25.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q20.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fresa con Queso Crema -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Fresa con Queso Crema</h3>
+                                <p>Clásica Q23.00 · Premium Q28.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q23.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Melocotón con Queso Crema -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Melocotón con Queso Crema</h3>
+                                <p>Clásica Q24.00 · Premium Q29.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q24.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-
-            <!-- OTROS -->
-            <section id="otros" class="menu-seccion">
+            <section id="bebidas-especiales" class="menu-seccion">
                 <div class="menu-seccion-titulo">
-                    <p class="section-label">Y MÁS</p>
-                    <h2>Otros</h2>
+                    <p class="section-label">BEBIDAS</p>
+                    <h2>Bebidas especiales</h2>
                 </div>
+
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="menu-vacio">Productos próximamente.</div>
+
+                    <!-- Licuados -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Licuados</h3>
+                                <p>Frutas, Fresa y Banano · Agua Q10.00 · Leche Q13.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q10.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Milk Shake -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Milk Shake</h3>
+                                <p>Fresa, Vainilla y Chocolate Q21.00 · Oreo Q25.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q21.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frappe -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Frappe</h3>
+                                <p>Tradicional Q17.00 · Oreo Q22.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q17.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fresas con Crema -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Fresas con Crema</h3>
+                                <p>Fresa Q25.00 · Mixto Q30.00</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Desde Q25.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="bebidas" class="menu-seccion">
+                <div class="menu-seccion-titulo">
+                    <p class="section-label">BEBIDAS</p>
+                    <h2>Bebidas</h2>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Bebidas Naturales -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Bebidas Naturales</h3>
+                                <p>Bebidas naturales</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q8.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pichel -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Pichel</h3>
+                                <p>Para compartir</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q25.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaseosa -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Gaseosa</h3>
+                                <p>12 onzas</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q7.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Café Negro -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Café Negro</h3>
+                                <p>Café negro</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q6.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Café con Leche -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Café con Leche</h3>
+                                <p>Café con leche</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q7.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cocoa con Leche -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Cocoa con Leche</h3>
+                                <p>Cocoa preparada con leche</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q10.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="acompanamientos" class="menu-seccion">
+                <div class="menu-seccion-titulo">
+                    <p class="section-label">EXTRAS</p>
+                    <h2>Acompañamientos y Extras</h2>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Papas Fritas -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Papas Fritas</h3>
+                                <p>Porción de papas fritas</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q13.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Papas Asadas -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Papas Asadas</h3>
+                                <p>Porción de papas asadas</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q8.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Porción de Pan -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Porción de Pan</h3>
+                                <p>4 rodajas</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q5.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Porción de Frijol -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Porción de Frijol</h3>
+                                <p>Porción de frijol</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q6.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Porción de Ensalada -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Porción de Ensalada</h3>
+                                <p>Porción de ensalada</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q12.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ranch -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-producto">
+                            <div class="menu-producto-imagen">
+                                <span>Foto próximamente</span>
+                            </div>
+
+                            <div class="menu-producto-contenido">
+                                <h3>Ranch</h3>
+                                <p>Porción adicional</p>
+
+                                <div class="menu-producto-pie">
+                                    <strong>Q2.00</strong>
+                                    <a href="#" class="btn btn-pedir">Pedir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -257,4 +1037,5 @@
     <script src="js/efectos.js"></script>
 
 </body>
+
 </html>

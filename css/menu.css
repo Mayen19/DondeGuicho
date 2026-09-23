@@ -212,6 +212,133 @@
 
 
 /* =========================
+   NUEVAS TARJETAS DE PRODUCTO
+========================= */
+
+.menu-producto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+}
+
+
+/* =========================
+   IMAGEN DEL PRODUCTO
+========================= */
+
+.menu-producto-imagen {
+    position: relative;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dddddd;
+    overflow: hidden;
+}
+
+.menu-producto-imagen span:first-child {
+    color: #777777;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   ETIQUETA BEST SELLER
+========================= */
+
+.producto-badge {
+    position: absolute;
+    top: 18px;
+    right: -42px;
+    z-index: 2;
+
+    background-color: var(--rojo);
+    color: var(--blanco);
+
+    padding: 8px 48px;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+
+    transform: rotate(35deg);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+
+/* =========================
+   CONTENIDO DEL PRODUCTO
+========================= */
+
+.menu-producto-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.menu-producto-contenido h3 {
+    font-size: 23px;
+    font-weight: 800;
+    margin: 0 0 8px;
+}
+
+.menu-producto-contenido p {
+    margin: 0 0 20px;
+    color: var(--gris);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PRECIO + BOTÓN
+========================= */
+
+.menu-producto-pie {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.menu-producto-pie strong {
+    color: var(--rojo);
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.btn-pedir {
+    padding: 10px 22px;
+    border-radius: 50px;
+    background-color: var(--naranja);
+    color: var(--negro);
+    font-size: 14px;
+    font-weight: 800;
+    transition: all 0.25s ease;
+}
+
+.btn-pedir:hover {
+    background-color: var(--naranja-oscuro);
+    color: var(--blanco);
+}
+
+
+/* =========================
    CATEGORÍA SIN PRODUCTOS
 ========================= */
 
@@ -247,8 +374,18 @@
     .menu-seccion-titulo h2 {
         font-size: 34px;
     }
-<<<<<<< HEAD
 }
-=======
+
+@media (max-width: 576px) {
+
+    .menu-producto-imagen {
+        height: 210px;
+    }
+
+    .producto-badge {
+        top: 16px;
+        right: -44px;
+        padding: 7px 48px;
+        font-size: 10px;
+    }
 }
->>>>>>> 4fd76ce475c0fe146b8f5528c0e3843558360d70
