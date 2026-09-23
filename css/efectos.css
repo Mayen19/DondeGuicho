@@ -1,0 +1,43 @@
+/* ========================================
+   DONDE GUICHO
+   EFECTOS (se carga después de los demás CSS)
+======================================== */
+
+/* Sombra del navbar al hacer scroll */
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar.con-sombra {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Aparición suave de secciones */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* Categoría activa en el menú */
+.menu-categorias a.activo {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+}
+
+
+/* Respeta a quien tiene desactivadas las animaciones */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
