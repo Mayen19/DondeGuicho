@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const botonesPedir = document.querySelectorAll(".btn-pedir");
+    const botonesPedir = document.querySelectorAll(".menu-producto .btn-pedir");
 
     botonesPedir.forEach(function (boton) {
         boton.addEventListener("click", function (event) {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .textContent
                 .trim();
 
-            const mensaje = `Hola, quisiera pedir ${producto}.`;
+            const mensaje = `Hola, quisiera pedir un ${producto}.`;
 
             const url = `https://wa.me/50243022282?text=${encodeURIComponent(mensaje)}`;
 
