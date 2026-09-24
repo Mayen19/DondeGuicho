@@ -1026,3 +1026,46 @@ footer {
     }
 
 }
+
+/* =========================
+   NAVBAR - ACCIONES MÓVILES
+========================= */
+
+.navbar-mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Computadora */
+@media (min-width: 992px) {
+
+    .navbar-mobile-actions {
+        margin-left: 15px;
+    }
+
+    .navbar-mobile-actions .btn-pedir {
+        white-space: nowrap;
+    }
+
+}
+
+/* Celular */
+@media (max-width: 991px) {
+
+    .navbar-mobile-actions {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .navbar-mobile-actions .btn-pedir {
+        margin: 0;
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+
+    .navbar-toggler {
+        margin: 0;
+    }
+
+}
