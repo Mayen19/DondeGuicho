@@ -5,7 +5,7 @@
 
 
 /* ========================================
-   COLORES
+   COLORES Y TIPOGRAFÍAS
 ======================================== */
 
 :root {
@@ -18,6 +18,10 @@
     --gris: #666666;
     --crema: #FFFDF8;
     --blanco: #FFFFFF;
+
+    --fuente-logo: "Century Gothic", "Montserrat", Arial, sans-serif;
+    --fuente-secundaria: "Montserrat", Arial, sans-serif;
+    --fuente-cuerpo: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -31,7 +35,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fuente-cuerpo);
     color: var(--negro);
     background-color: var(--crema);
 }
@@ -94,6 +98,7 @@ section {
 }
 
 .navbar-links a:not(.btn-pedir) {
+    font-family: var(--fuente-secundaria);
     color: var(--negro);
     font-size: 15px;
     font-weight: 700;
@@ -108,12 +113,12 @@ section {
     bottom: -7px;
     width: 0;
     height: 2px;
-    background-color: var(--naranja);
+    background-color: var(--turquesa-oscuro);
     transition: width 0.25s ease;
 }
 
 .navbar-links a:not(.btn-pedir):hover {
-    color: var(--naranja-oscuro);
+    color: var(--turquesa-oscuro);
 }
 
 .navbar-links a:not(.btn-pedir):hover::after {
@@ -124,6 +129,7 @@ section {
 /* BOTÓN PEDIR */
 
 .btn-pedir {
+    font-family: var(--fuente-secundaria);
     background-color: var(--naranja);
     color: var(--negro) !important;
     padding: 11px 22px;
@@ -168,12 +174,10 @@ section {
     position: relative;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,0.85) 0%,
-            rgba(0,0,0,0.65) 40%,
-            rgba(0,0,0,0.15) 100%
-        ),
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.65) 40%,
+            rgba(0, 0, 0, 0.15) 100%),
         url("../images/hero.jpg");
 
     background-size: cover;
@@ -187,6 +191,7 @@ section {
 }
 
 .hero-subtitle {
+    font-family: var(--fuente-secundaria);
     color: var(--naranja);
     font-size: 14px;
     font-weight: 800;
@@ -195,6 +200,7 @@ section {
 }
 
 .hero h1 {
+    font-family: var(--fuente-logo);
     font-size: clamp(55px, 7vw, 90px);
     line-height: 0.95;
     font-weight: 900;
@@ -221,6 +227,7 @@ section {
 ========================= */
 
 .btn {
+    font-family: var(--fuente-secundaria);
     border-radius: 50px;
     padding: 13px 28px;
     font-weight: 700;
@@ -262,6 +269,7 @@ section {
 
 .section-title p,
 .section-label {
+    font-family: var(--fuente-secundaria);
     color: var(--turquesa-oscuro);
     font-size: 13px;
     font-weight: 800;
@@ -270,6 +278,7 @@ section {
 }
 
 .section-title h2 {
+    font-family: var(--fuente-logo);
     font-size: 42px;
     font-weight: 900;
     letter-spacing: -1.5px;
@@ -316,6 +325,7 @@ section {
 }
 
 .producto h3 {
+    font-family: var(--fuente-logo);
     font-size: 23px;
     font-weight: 800;
     margin-bottom: 7px;
@@ -353,6 +363,7 @@ section {
 }
 
 .nosotros h2 {
+    font-family: var(--fuente-logo);
     font-size: 48px;
     font-weight: 900;
     line-height: 1;
@@ -371,20 +382,158 @@ section {
 ========================= */
 
 .ubicacion {
-    padding: 85px 0;
+    padding: 90px 0;
     background-color: var(--blanco);
 }
 
-.ubicacion h3 {
-    font-size: 25px;
-    font-weight: 800;
-    margin-bottom: 15px;
+.ubicacion .section-title {
+    margin-bottom: 55px;
 }
 
-.ubicacion p {
-    color: var(--gris);
-    line-height: 1.7;
+.ubicacion-info {
+    padding: 15px 20px 15px 0;
 }
+
+.ubicacion-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background-color: rgba(245, 166, 35, 0.15);
+
+    font-size: 26px;
+}
+
+.ubicacion-info h3 {
+    font-family: var(--fuente-logo);
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    margin-bottom: 12px;
+}
+
+.ubicacion-direccion {
+    color: var(--gris);
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.ubicacion-dato {
+    padding: 20px 0;
+    margin-bottom: 25px;
+
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.ubicacion-dato strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: var(--fuente-secundaria);
+    color: var(--negro);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.ubicacion-dato p {
+    color: var(--gris);
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+.ubicacion-info .btn {
+    font-family: var(--fuente-secundaria);
+    font-weight: 800;
+}
+
+.ubicacion-mapa {
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    line-height: 0;
+}
+
+.mapa-controles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    padding: 10px;
+
+    background-color: var(--blanco);
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.mapa-btn {
+    border: 1px solid #dddddd;
+
+    background-color: var(--crema);
+    color: var(--negro);
+
+    padding: 8px 15px;
+
+    border-radius: 50px;
+
+    font-family: var(--fuente-secundaria);
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.mapa-btn:hover {
+    border-color: var(--naranja);
+    background-color: #fff7e8;
+}
+
+.mapa-btn.activo {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+    color: var(--negro);
+}
+
+.mapa-btn:active {
+    transform: scale(0.97);
+}
+
+.ubicacion-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
 
 
 /* =========================
@@ -402,12 +551,13 @@ section {
 }
 
 .contacto h2 {
+    font-family: var(--fuente-logo);
     font-size: 55px;
     font-weight: 900;
     margin-bottom: 15px;
 }
 
-.contacto > .container > p:not(.section-label) {
+.contacto>.container>p:not(.section-label) {
     font-size: 18px;
     margin-bottom: 30px;
 }
@@ -433,6 +583,7 @@ section {
 }
 
 .redes a {
+    font-family: var(--fuente-secundaria);
     color: var(--blanco);
     font-size: 20px;
     font-weight: 800;
@@ -454,6 +605,7 @@ footer {
 }
 
 footer h3 {
+    font-family: var(--fuente-logo);
     font-weight: 900;
     margin-bottom: 10px;
 }

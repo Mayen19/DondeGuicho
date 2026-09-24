@@ -26,6 +26,9 @@
     <!-- Al publicar la página se agregan aquí og:url y og:image con la dirección real del sitio -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/efectos.css">
 </head>
@@ -247,77 +250,74 @@
     </section>
 
 
-    <!-- UBICACIÓN -->
-    <!-- UBICACIÓN -->
-    <section id="ubicacion" class="ubicacion">
+    <!-- =========================
+     UBICACIÓN
+========================= -->
 
+    <section class="ubicacion" id="ubicacion">
         <div class="container">
 
             <div class="section-title">
-
-                <p>VISÍTANOS</p>
-
-                <h2>
-                    Estamos en La Bethania
-                </h2>
-
+                <p>ENCUÉNTRANOS</p>
+                <h2>Visítanos</h2>
             </div>
 
+            <div class="row align-items-center g-5">
 
-            <div class="row">
+                <!-- INFORMACIÓN -->
+                <div class="col-lg-5">
 
-                <div class="col-md-6">
+                    <div class="ubicacion-info">
 
-                    <h3>
-                        📍 Ubicación
-                    </h3>
+                        <span class="ubicacion-icono">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </span>
 
-                    <p>
-                        Zona 7, La Bethania<br>
-                        Ciudad de Guatemala
-                    </p>
+                        <h3>Donde Guicho</h3>
 
-                    <a href="https://share.google/nMXuHJMTGlJ88zJfP" target="_blank" rel="noopener"
-                        class="btn btn-primary">
-                        Ver en Google Maps
-                    </a>
+                        <p class="ubicacion-direccion">
+                            La Bethania, Zona 7<br>
+                            Ciudad de Guatemala
+                        </p>
+
+                        <div class="ubicacion-dato">
+                            <strong>Horario</strong>
+                            <p>
+                                Lunes a jueves: 1:00 PM – 9:00 PM<br>
+                                Viernes a domingo: 1:00 PM – 10:00 PM
+                            </p>
+                        </div>
+
+                        <a href="https://share.google/nMXuHJMTGlJ88zJfP" target="_blank" class="btn btn-primary">
+                            Cómo llegar
+                        </a>
+
+                    </div>
 
                 </div>
 
 
-                <div class="col-md-6">
+                <!-- MAPA -->
+                <div class="col-lg-7">
 
-                    <h3>
-                        🕐 Horarios
-                    </h3>
+                    <div class="ubicacion-mapa">
 
-                    <p>
-                        <strong>Lunes a Jueves</strong><br>
-                        1:00 PM – 9:00 PM
-                    </p>
+                        <div class="mapa-controles">
+                            <button type="button" class="mapa-btn activo" data-tipo="mapa">
+                                <i class="bi bi-map"></i>
+                                Mapa
+                            </button>
 
-                    <p>
-                        <strong>Viernes a Domingo</strong><br>
-                        1:00 PM – 10:00 PM
-                    </p>
+                            <button type="button" class="mapa-btn" data-tipo="satelite">
+                                <i class="bi bi-globe-americas"></i>
+                                Satélite
+                            </button>
+                        </div>
 
-                </div>
-
-            </div>
-
-
-            <!-- MAPA -->
-            <div class="row mt-4">
-
-                <div class="col-12">
-
-                    <div class="ratio ratio-16x9" style="border-radius: 20px; overflow: hidden; min-height: 320px;">
-
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.1417986530523!2d-90.53900911884898!3d14.647891039437496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a185eeaab4df%3A0x3f180b2bde2a440c!2sDonde%20Guicho!5e0!3m2!1ses-419!2sgt!4v1790184109555!5m2!1ses-419!2sgt"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            title="Mapa de Donde Guicho en La Bethania">
+                        <iframe id="mapa-donde-guicho"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.1417980106785!2d-90.53671312472795!3d14.647891075916741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a185eeaab4df%3A0x3f180b2bde2a440c!2sDonde%20Guicho!5e0!3m2!1ses-419!2sgt!4v1790267019044!5m2!1ses-419!2sgt"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
                         </iframe>
 
                     </div>
@@ -325,9 +325,6 @@
                 </div>
 
             </div>
-
-        </div>
-
     </section>
 
     <!-- CONTACTO -->

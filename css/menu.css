@@ -1,18 +1,26 @@
 /* ========================================
    DONDE GUICHO
    ESTILOS DE LA PÁGINA MENÚ
-   (se carga después de style.css)
 ======================================== */
+
+
+/* =========================
+   FUENTES
+========================= */
 
 .menu-header,
 .menu-categorias,
 .menu-contenido {
-    font-family: inherit;
+    font-family: var(--fuente-cuerpo);
 }
 
-/* Enlace activo del navbar */
+
+/* =========================
+   ENLACE ACTIVO DEL NAVBAR
+========================= */
+
 .navbar-links a.activo:not(.btn-pedir) {
-    color: var(--naranja-oscuro);
+    color: var(--turquesa-oscuro);
 }
 
 .navbar-links a.activo:not(.btn-pedir)::after {
@@ -28,14 +36,19 @@
     min-height: 360px;
     display: flex;
     align-items: center;
+
     background:
-        linear-gradient(90deg,
+        linear-gradient(
+            90deg,
             rgba(0, 0, 0, 0.88) 0%,
             rgba(0, 0, 0, 0.65) 50%,
-            rgba(0, 0, 0, 0.35) 100%),
+            rgba(0, 0, 0, 0.35) 100%
+        ),
         url("../images/carne-asada.jpg");
+
     background-size: cover;
     background-position: center;
+
     color: var(--blanco);
 }
 
@@ -45,6 +58,7 @@
 }
 
 .menu-header h1 {
+    font-family: var(--fuente-logo);
     font-size: clamp(50px, 6vw, 80px);
     line-height: 0.95;
     font-weight: 900;
@@ -68,17 +82,23 @@
     position: sticky;
     top: 82px;
     z-index: 900;
+
     background-color: var(--blanco);
+
     border-bottom: 1px solid #eeeeee;
+
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
 }
 
 .menu-categorias .container {
     display: flex;
     gap: 10px;
+
     padding-top: 14px;
     padding-bottom: 14px;
+
     overflow-x: auto;
+
     scrollbar-width: none;
 }
 
@@ -88,19 +108,32 @@
 
 .menu-categorias a {
     flex: 0 0 auto;
+
     padding: 9px 20px;
+
     border-radius: 50px;
-    background-color: var(--crema);
     border: 2px solid #eeeeee;
+
+    background-color: var(--crema);
+
     color: var(--negro);
+
+    font-family: var(--fuente-secundaria);
     font-size: 15px;
     font-weight: 700;
-    transition: all 0.2s ease;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .menu-categorias a:hover {
     background-color: var(--naranja);
     border-color: var(--naranja);
+    color: var(--negro);
+    transform: translateY(-1px);
 }
 
 
@@ -110,7 +143,7 @@
 
 .menu-contenido {
     background-color: var(--crema);
-    padding: 30px 0 40px;
+    padding: 30px 0 50px;
 }
 
 .menu-seccion {
@@ -121,6 +154,7 @@
 .menu-seccion-titulo {
     margin-bottom: 30px;
     padding-bottom: 16px;
+
     border-bottom: 3px solid var(--naranja);
 }
 
@@ -129,77 +163,109 @@
 }
 
 .menu-seccion-titulo h2 {
+    font-family: var(--fuente-logo);
     font-size: 42px;
     font-weight: 900;
     letter-spacing: -1.5px;
+
     margin: 0;
 }
 
 
 /* =========================
-   TARJETA DE PRODUCTO
+   TARJETAS ANTIGUAS
 ========================= */
 
 .menu-item {
     height: 100%;
+
     display: flex;
     flex-direction: column;
+
     background-color: var(--blanco);
+
     border-radius: 18px;
+
     overflow: hidden;
+
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+
+    box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item-img {
     height: 230px;
+
     background-color: #dddddd;
+
     background-size: cover;
     background-position: center;
 }
 
 .menu-item-body {
     flex: 1;
+
     display: flex;
     flex-direction: column;
+
     padding: 20px;
 }
 
 .menu-item-top {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
+
     gap: 12px;
+
     margin-bottom: 16px;
 }
 
 .menu-item-top h3 {
+    font-family: var(--fuente-logo);
     font-size: 23px;
     font-weight: 800;
+
     margin: 0;
 }
 
 .menu-precio {
     flex: 0 0 auto;
+
     color: var(--rojo);
+
+    font-family: var(--fuente-logo);
     font-size: 23px;
     font-weight: 900;
 }
 
 .btn-item {
     margin-top: auto;
+
     align-self: flex-start;
+
     padding: 10px 24px;
+
     border-radius: 50px;
+
     background-color: var(--naranja);
+
     color: var(--negro);
+
+    font-family: var(--fuente-secundaria);
     font-size: 14px;
     font-weight: 800;
+
     transition: all 0.25s ease;
 }
 
@@ -210,70 +276,137 @@
 
 
 /* =========================
-   NUEVAS TARJETAS DE PRODUCTO
+   TARJETAS ACTUALES
 ========================= */
 
 .menu-producto {
     height: 100%;
+
     display: flex;
     flex-direction: column;
+
     background-color: var(--blanco);
-    border-radius: 18px;
+
+    border-radius: 20px;
+
     overflow: hidden;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .menu-producto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
 
 /* =========================
-   IMAGEN DEL PRODUCTO
+   IMAGEN / PLACEHOLDER
 ========================= */
 
 .menu-producto-imagen {
     position: relative;
-    height: 230px;
+
+    height: 250px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    background-color: #dddddd;
+
     overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(245, 166, 35, 0.14),
+            rgba(32, 179, 166, 0.10)
+        ),
+        #f1f1f1;
+}
+
+.menu-producto-imagen::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0) 70%
+        );
+
+    pointer-events: none;
 }
 
 .menu-producto-imagen span:first-child {
-    color: #777777;
-    font-size: 15px;
+    position: relative;
+    z-index: 1;
+
+    padding: 10px 17px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 50px;
+
+    background-color: rgba(255, 255, 255, 0.88);
+
+    color: #888888;
+
+    font-family: var(--fuente-secundaria);
+    font-size: 13px;
     font-weight: 700;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.04);
 }
 
 
 /* =========================
-   ETIQUETA BEST SELLER
+   BEST SELLER
 ========================= */
 
 .producto-badge {
     position: absolute;
+
     top: 18px;
     right: -42px;
+
     z-index: 2;
 
     background-color: var(--rojo);
+
     color: var(--blanco);
 
     padding: 8px 48px;
 
+    font-family: var(--fuente-secundaria);
     font-size: 11px;
     font-weight: 900;
+
     letter-spacing: 0.08em;
+
     white-space: nowrap;
 
     transform: rotate(35deg);
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -283,21 +416,34 @@
 
 .menu-producto-contenido {
     flex: 1;
+
     display: flex;
     flex-direction: column;
-    padding: 20px;
+
+    padding: 22px 20px 20px;
 }
 
 .menu-producto-contenido h3 {
-    font-size: 23px;
+    font-family: var(--fuente-logo);
+    font-size: 24px;
+
     font-weight: 800;
-    margin: 0 0 8px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.8px;
+
+    margin: 0 0 9px;
 }
 
 .menu-producto-contenido p {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
+
     color: var(--gris);
+
+    font-family: var(--fuente-cuerpo);
     font-size: 15px;
+
     line-height: 1.5;
 }
 
@@ -308,31 +454,55 @@
 
 .menu-producto-pie {
     margin-top: auto;
+
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 12px;
 }
 
 .menu-producto-pie strong {
     color: var(--rojo);
-    font-size: 23px;
+
+    font-family: var(--fuente-logo);
+    font-size: 24px;
+
     font-weight: 900;
+
+    letter-spacing: -0.8px;
 }
 
 .btn-pedir {
-    padding: 10px 22px;
+    padding: 11px 23px;
+
     border-radius: 50px;
+
     background-color: var(--naranja);
+
     color: var(--negro);
+
+    font-family: var(--fuente-secundaria);
     font-size: 14px;
     font-weight: 800;
-    transition: all 0.25s ease;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .btn-pedir:hover {
     background-color: var(--naranja-oscuro);
+
     color: var(--blanco);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(216, 137, 11, 0.25);
 }
 
 
@@ -342,16 +512,38 @@
 
 .menu-vacio {
     padding: 28px;
+
     border: 2px dashed #dddddd;
+
     border-radius: 16px;
+
     color: var(--gris);
+
     font-size: 17px;
+
     text-align: center;
 }
 
 
 /* =========================
-   MÓVIL
+   NOTA DEL MENÚ
+========================= */
+
+.menu-nota {
+    margin-top: -12px;
+    margin-bottom: 28px;
+
+    color: var(--gris);
+
+    font-family: var(--fuente-secundaria);
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   MÓVIL / TABLET
 ========================= */
 
 @media (max-width: 991px) {
@@ -372,40 +564,70 @@
     .menu-seccion-titulo h2 {
         font-size: 34px;
     }
+
+    .menu-producto:hover {
+        transform: translateY(-4px);
+    }
 }
 
+
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 576px) {
+
+    .menu-header .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .menu-header h1 {
+        font-size: 44px;
+    }
+
+    .menu-header p:not(.hero-subtitle) {
+        font-size: 16px;
+    }
+
+    .menu-seccion {
+        padding-top: 40px;
+    }
+
+    .menu-seccion-titulo {
+        margin-bottom: 24px;
+    }
+
+    .menu-seccion-titulo h2 {
+        font-size: 32px;
+    }
 
     .menu-producto-imagen {
         height: 210px;
     }
 
+    .menu-producto-contenido {
+        padding: 20px 18px 18px;
+    }
+
+    .menu-producto-contenido h3 {
+        font-size: 22px;
+    }
+
+    .menu-producto-pie strong {
+        font-size: 22px;
+    }
+
+    .btn-pedir {
+        padding: 10px 20px;
+    }
+
     .producto-badge {
         top: 16px;
         right: -44px;
+
         padding: 7px 48px;
+
         font-size: 10px;
     }
-}
-
-/* =========================
-   PLACEHOLDER DE PRODUCTOS
-========================= */
-
-.menu-producto-imagen {
-    background:
-        linear-gradient(135deg,
-            rgba(245, 166, 35, 0.12),
-            rgba(32, 179, 166, 0.08)),
-        #f1f1f1;
-}
-
-.menu-producto-imagen span:first-child {
-    padding: 9px 16px;
-    border: 1px solid #dddddd;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.85);
-    color: #888888;
-    font-size: 13px;
-    font-weight: 700;
 }
