@@ -59,3 +59,118 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// =========================
+// CARRUSEL DESTACADOS
+// =========================
+
+const fotosCarrusel = document.querySelectorAll(".carrusel-foto");
+const indicadores = document.querySelectorAll(".indicador");
+const anterior = document.querySelector(".carrusel-anterior");
+const siguiente = document.querySelector(".carrusel-siguiente");
+
+let indiceActual = 0;
+let intervaloCarrusel;
+
+
+function mostrarFoto(indice) {
+
+    fotosCarrusel.forEach(function (foto) {
+        foto.classList.remove("activa");
+    });
+
+    indicadores.forEach(function (indicador) {
+        indicador.classList.remove("activo");
+    });
+
+    fotosCarrusel[indice].classList.add("activa");
+    indicadores[indice].classList.add("activo");
+
+    indiceActual = indice;
+}
+
+
+function siguienteFoto() {
+
+    let nuevoIndice = indiceActual + 1;
+
+    if (nuevoIndice >= fotosCarrusel.length) {
+        nuevoIndice = 0;
+    }
+
+    mostrarFoto(nuevoIndice);
+}
+
+
+function anteriorFoto() {
+
+    let nuevoIndice = indiceActual - 1;
+
+    if (nuevoIndice < 0) {
+        nuevoIndice = fotosCarrusel.length - 1;
+    }
+
+    mostrarFoto(nuevoIndice);
+}
+
+
+/* FLECHA SIGUIENTE */
+
+siguiente.addEventListener("click", function () {
+
+    siguienteFoto();
+
+    reiniciarCarrusel();
+
+});
+
+
+/* FLECHA ANTERIOR */
+
+anterior.addEventListener("click", function () {
+
+    anteriorFoto();
+
+    reiniciarCarrusel();
+
+});
+
+
+/* INDICADORES */
+
+indicadores.forEach(function (indicador, indice) {
+
+    indicador.addEventListener("click", function () {
+
+        mostrarFoto(indice);
+
+        reiniciarCarrusel();
+
+    });
+
+});
+
+
+/* CAMBIO AUTOMÁTICO */
+
+function iniciarCarrusel() {
+
+    intervaloCarrusel = setInterval(function () {
+
+        siguienteFoto();
+
+    }, 5000);
+
+}
+
+
+function reiniciarCarrusel() {
+
+    clearInterval(intervaloCarrusel);
+
+    iniciarCarrusel();
+
+}
+
+
+iniciarCarrusel();
