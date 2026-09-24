@@ -1032,30 +1032,21 @@ footer {
 ========================= */
 
 .navbar-mobile-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: none;
 }
 
-/* Computadora */
-@media (min-width: 992px) {
 
-    .navbar-mobile-actions {
-        margin-left: 15px;
-    }
+/* =========================
+   CELULAR
+========================= */
 
-    .navbar-mobile-actions .btn-pedir {
-        white-space: nowrap;
-    }
-
-}
-
-/* Celular */
 @media (max-width: 991px) {
 
     .navbar-mobile-actions {
-        margin-left: auto;
+        display: flex;
+        align-items: center;
         gap: 8px;
+        margin-left: auto;
     }
 
     .navbar-mobile-actions .btn-pedir {
@@ -1064,8 +1055,25 @@ footer {
         white-space: nowrap;
     }
 
-    .navbar-toggler {
+    .navbar-mobile-actions .navbar-toggler {
         margin: 0;
+    }
+
+    .navbar-links .pedir-desktop {
+        display: none;
+    }
+
+}
+
+
+/* =========================
+   COMPUTADORA
+========================= */
+
+@media (min-width: 992px) {
+
+    .navbar-links .pedir-desktop {
+        display: inline-flex;
     }
 
 }
