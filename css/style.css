@@ -1063,6 +1063,20 @@ footer {
         display: none;
     }
 
+    /* Navbar desplegado en celular */
+    .navbar-collapse {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .navbar-links {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
 }
 
 

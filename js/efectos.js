@@ -57,32 +57,61 @@ document.addEventListener("DOMContentLoaded", function () {
     const enlaces = document.querySelectorAll(".menu-categorias a");
     const secciones = document.querySelectorAll(".menu-seccion");
 
-    if (barra && enlaces.length && secciones.length && "IntersectionObserver" in window) {
+    if (barra && enlaces.length && secciones.length) {
 
-        const observadorMenu = new IntersectionObserver(function (entradas) {
-            entradas.forEach(function (entrada) {
-                if (!entrada.isIntersecting) return;
+        function actualizarCategoriaActiva() {
 
-                enlaces.forEach(function (enlace) {
-                    const activo = enlace.getAttribute("href") === "#" + entrada.target.id;
-                    enlace.classList.toggle("activo", activo);
+            let seccionActiva = null;
+            let distanciaMasCercana = Infinity;
 
-                    // Desliza la barra para mostrar el botón activo (celular)
-                    if (activo) {
-                        const b = barra.getBoundingClientRect();
-                        const l = enlace.getBoundingClientRect();
-                        barra.scrollBy({
-                            left: l.left - b.left - (b.width - l.width) / 2,
-                            behavior: "smooth"
-                        });
-                    }
-                });
+            secciones.forEach(function (seccion) {
+
+                const rect = seccion.getBoundingClientRect();
+
+                // Punto de referencia debajo de la barra de categorías
+                const distancia = Math.abs(rect.top - 180);
+
+                if (rect.top <= 180 && distancia < distanciaMasCercana) {
+                    distanciaMasCercana = distancia;
+                    seccionActiva = seccion;
+                }
+
             });
-        }, { rootMargin: "-40% 0px -55% 0px" });
 
-        secciones.forEach(function (seccion) {
-            observadorMenu.observe(seccion);
+            // Si todavía no encontramos una sección, usamos la primera
+            if (!seccionActiva) {
+                seccionActiva = secciones[0];
+            }
+
+            enlaces.forEach(function (enlace) {
+                enlace.classList.remove("activo");
+            });
+
+            const enlaceActivo = document.querySelector(
+                '.menu-categorias a[href="#' + seccionActiva.id + '"]'
+            );
+
+            if (enlaceActivo) {
+
+                enlaceActivo.classList.add("activo");
+
+                // Centra automáticamente la categoría activa
+                const b = barra.getBoundingClientRect();
+                const l = enlaceActivo.getBoundingClientRect();
+
+                barra.scrollBy({
+                    left: l.left - b.left - (b.width - l.width) / 2,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        actualizarCategoriaActiva();
+
+        window.addEventListener("scroll", actualizarCategoriaActiva, {
+            passive: true
         });
+
     }
 
 });
