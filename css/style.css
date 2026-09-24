@@ -1091,3 +1091,28 @@ footer {
     }
 
 }
+
+/* =========================
+   SOBRE NOSOTROS - CELULAR
+========================= */
+
+@media (max-width: 991px) {
+
+    .nosotros .col-md-6:last-child {
+        padding: 10px 15px;
+    }
+
+    .nosotros h2 {
+        font-size: 36px;
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+        margin-bottom: 20px;
+    }
+
+    .nosotros .col-md-6:last-child p:not(.section-label) {
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 16px;
+    }
+
+}
