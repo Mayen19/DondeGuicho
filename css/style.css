@@ -1116,3 +1116,23 @@ footer {
     }
 
 }
+
+/* =========================
+   NAVBAR - TAMAÑO UNIFICADO
+========================= */
+
+@media (min-width: 992px) {
+
+    .navbar-links a {
+        font-family: var(--fuente-secundaria);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .navbar-links .btn-pedir {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+}
